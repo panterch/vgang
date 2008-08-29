@@ -1,0 +1,14 @@
+%h1
+  Welcome
+  =@customer.company
+  , your videos are listed below.
+
+%p
+  Do you have any questions or suggestions about this service? Don't hesitate
+  to contact us via 
+  %a{:href => 'mailto:test@example.com'} email
+  or phone ++41 (0)44 123 123 123!
+#videos
+  =render :partial => 'videos/video', :collection => @customer.videos
+  .clear
+

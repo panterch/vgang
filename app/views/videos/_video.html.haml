@@ -1,0 +1,14 @@
+.preview
+  =image_tag('preview.jpg')
+  %p
+    Title:
+    = h(video.title)
+  %p
+    Uploaded:
+    = time_ago_in_words(video.created_at)
+    ago
+  %p
+    = link_to 'Download video', customer_video_path(@customer, video)
+  %p
+    Filename:
+    = h(video.key)

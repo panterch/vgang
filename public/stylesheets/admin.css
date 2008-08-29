@@ -1,0 +1,35 @@
+
+#menu {
+  padding: 10px;
+  padding-top:  30px;
+  width:  190px;
+  height: 100%;
+  float: left;
+}
+
+#menu h3 {
+  margin-top: 25px;
+  font-size: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+#menu ul {
+  margin-left: 0px;
+  padding-left: 0px;
+  padding-bottom: 1em;
+}
+
+#menu li {
+  padding-top: 0.2em;
+  list-style-type: none;
+}
+
+#content {
+  background-color: white;
+  border: 3px solid #aaa;
+  border-top: none;
+  margin-left: 210px;
+  padding: 20px;
+}
+

@@ -1,0 +1,50 @@
+%h1
+  Customer
+  =h @customer.company
+
+%h2 Customer information
+%p
+  Company:
+  =h @customer.company
+
+%p
+  Contact
+  =h @customer.contact 
+
+%p
+  Address:
+  =h @customer.address
+
+%p
+  Email:
+  =h @customer.email
+
+
+= link_to 'Edit customer information', edit_customer_path(@customer)
+|
+= link_to 'Back to customer list', customers_path
+
+%h2 Private Videos
+%p
+  Please Upload customer's private videos to the bucket
+%p.verbatim
+  =h @customer.bucket
+
+%h2 Customers Webpage
+%p
+  The following link leads to the customers private homepage. You may give copy
+  and paste this url and send it to your customer's contact.
+%p.verbatim
+  =customer_videos_url(@customer)
+%p
+  =link_to "Click here to see a preview of the customers private page", customer_videos_url(@customer)
+%p.disclaimer
+  (Please remember that there are no security constraints implemented
+  in the prototype application)
+
+%h2 Available Videos
+#videos
+  =render :partial => 'videos/video', :collection => @customer.videos
+  .clear
+
+=javascript_tag "Sortable.create('videos', { tag: 'div', only: 'preview', overlap: 'horizontal', constraint: false, scroll: window})"
