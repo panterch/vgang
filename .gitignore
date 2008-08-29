@@ -2,7 +2,6 @@ log/*.log
 tmp/**/*
 .DS_Store
 doc/*
-config/database.yml
 public/uploads/*
 db/*sqlite3
 *.swp
