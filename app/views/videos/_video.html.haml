@@ -9,6 +9,9 @@
     ago
   %p
     = link_to 'Download video', customer_video_path(@customer, video)
+    (
+    = number_to_human_size(video.size)
+    )
   %p
     Filename:
     = h(video.key)

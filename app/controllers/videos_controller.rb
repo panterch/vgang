@@ -16,7 +16,7 @@ class VideosController < ApplicationController
   # GET /videos/1
   # GET /videos/1.xml
   def show
-    send_file(File::join(@video.customer.bucket, @video.key))
+    send_file(@video.path)
   end
 
   # PUT /videos/1
